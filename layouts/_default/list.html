@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ if .Content }}<div class="content">{{ .Content }}</div>{{ end }}
+  {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+  {{ range $paginator.Pages }}
+    <article>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+      <p>{{ .Summary }}</p>
+      <p><a href="{{ .RelPermalink }}">閱讀更多 →</a></p>
+    </article>
+  {{ end }}
+  <nav>
+    {{ template "_internal/pagination.html" . }}
+  </nav>
+{{ end }}
