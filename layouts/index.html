@@ -1,0 +1,17 @@
+{{ define "main" }}
+  歡迎來到 ponpon 的部落格！
+  <h1>最新文章</h1>
+
+  {{ $list := where .Site.RegularPages "Section" "posts" }}
+  {{ $p := .Paginate $list }}
+  {{ range $p.Pages }}
+    <article>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+      <p>{{ .Summary }}</p>
+      <p><a href="{{ .RelPermalink }}">閱讀更多 →</a></p>
+    </article>
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
+{{ end }}
