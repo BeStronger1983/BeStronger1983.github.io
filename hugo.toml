@@ -2,6 +2,8 @@ baseURL = "https://BeStronger1983.github.io/"
 title = "ponpon 的部落格"
 languageCode = "zh-tw"
 enableRobotsTXT = true
+hasCJKLanguage = true     # 讓 Hugo 以中日韓規則切字
+summaryLength = 140       # 首頁摘要長度（約 140「字」）
 
 [params]
   author = "ponpon"
