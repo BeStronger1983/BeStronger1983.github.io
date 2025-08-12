@@ -1,8 +1,10 @@
 baseURL = "https://BeStronger1983.github.io/"
 title = "ponpon 的部落格"
 languageCode = "zh-tw"
-paginate = 10
 enableRobotsTXT = true
 
 [params]
   author = "ponpon"
+
+[pagination]
+  pagerSize = 10
