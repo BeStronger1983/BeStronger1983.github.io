@@ -3,7 +3,7 @@ title: "Openai Codex Cli 試玩心得"
 date: 2025-08-28T17:46:28+08:00
 draft: false
 ---
-看到保哥說 OpenAI Codex CLI + GPT5 寫程式蠻強的，我就找了個機會玩玩看。因為公司自架的 GitLab 放在內網，不能連外網，Webhook 跟 CI/CD 有些功能都不能用，所以沒辦法有人 git push 新 commit 的時候，就發訊息通知到 Telegram，不太方便，我就想說能不能自己土砲解決。
+前幾天看到保哥說，OpenAI Codex CLI + GPT5 寫程式蠻強的，我就找了個機會玩玩看。因為公司自架的 GitLab 放在內網，不能連外網，Webhook 跟 CI/CD 有些功能都不能用，所以沒辦法有人 git push 新 commit 的時候，就發訊息通知到 Telegram，我就想說能不能自己土砲解決。
 
 <!--more-->
 
