@@ -22,6 +22,18 @@
 
 > 若你準備自訂網域，請到 **Settings → Pages** 綁定；同時把 `hugo.toml` 的 `baseURL` 改為你的網域（含 `https://` ）。
 
+## 檢查部署狀態
+
+推送程式碼後，前往以下連結追蹤 GitHub Actions 執行進度：
+
+**https://github.com/BeStronger1983/BeStronger1983.github.io/actions**
+
+- 🟡 黃色圓圈：執行中
+- ✅ 綠色勾勾：成功完成
+- ❌ 紅色叉叉：執行失敗
+
+點擊任一執行記錄可查看詳細 log。
+
 ## 本機開發
 
 ```bash
