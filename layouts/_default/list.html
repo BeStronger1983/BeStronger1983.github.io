@@ -1,19 +1,14 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1>文章列表</h1>
   {{ if .Content }}<div class="content">{{ .Content }}</div>{{ end }}
-  {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-  {{ $pages := $paginator.Pages }}
-  {{ range $i, $page := $pages }}
-    <article>
-      <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
-      <div class="meta">{{ $page.Date.Format "2006-01-02" }}</div>
-      <p>{{ $page.Summary }}</p>
-    </article>
-    {{ if lt $i (sub (len $pages) 1) }}
-      <hr>
-    {{ end }}
+  
+  {{ $pages := where .Pages "Type" "posts" }}
+  {{ range $pages.GroupByDate "2006" "desc" }}
+    <h2>{{ .Key }} 年</h2>
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
   {{ end }}
-  <nav>
-    {{ template "_internal/pagination.html" . }}
-  </nav>
 {{ end }}
